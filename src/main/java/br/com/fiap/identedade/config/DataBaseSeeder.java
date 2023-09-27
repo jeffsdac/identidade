@@ -4,6 +4,7 @@ package br.com.fiap.identedade.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import br.com.fiap.identedade.models.Clinica;
@@ -16,6 +17,7 @@ import br.com.fiap.identedade.repository.EnderecoRepository;
 import br.com.fiap.identedade.repository.UsuarioRepository;
 
 @Configuration
+@Profile("dev")
 public class DataBaseSeeder implements CommandLineRunner{
 	@Autowired
 	ClinicaRepository repositoryClinica;
